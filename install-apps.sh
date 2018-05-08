@@ -79,7 +79,6 @@ rm -rf "${GF_DIR}/workflow/apps"
 mkdir -p "${GF_DIR}/workflow/apps"
 
 # download app packages from repos
-APP_REPO_PREFIX=$(cat ${GF_DIR}/workflow/apps-repo.yaml | shyaml get-value prefix)
 APP_LIST=$(cat ${GF_DIR}/workflow/apps-repo.yaml | shyaml get-values apps)
 
 for app in ${APP_LIST[@]}; do
@@ -87,7 +86,7 @@ for app in ${APP_LIST[@]}; do
     repo_folder=$(echo $app | awk -F/ '{print $2}')
     repo_path="${GF_DIR}/workflow/apps/${repo_folder}"
     mkdir -p "${repo_path}"
-    repo_cmd="git clone ${APP_REPO_PREFIX}${app} ${repo_path}"
+    repo_cmd="git clone ${app} ${repo_path}"
     echo "${repo_cmd}"
     ${repo_cmd}
 
