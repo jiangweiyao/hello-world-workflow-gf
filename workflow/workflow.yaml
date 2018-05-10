@@ -3,29 +3,12 @@
 gfVersion: v1.0
 class: workflow
 
-# workflow metadata
-name: example workflow
-description: example workflow description
-version: '0.1'
-documentation_uri: documentation
-final_output:
-- step
+# metadata
 
-# default workflow inputs
-inputs:
-  input1: /input/file1
-  input2: /input/file2
+# inputs
 
-# default workflow parameters
-parameters: 
-  param1: value
+# parameters
 
-# workflow steps
-steps:
-- name: step1
-  app_name: app_name
-  depend: []
-  template:
-    input: '{workflow->input1}'
-    output: value
+# steps
+
 ...
