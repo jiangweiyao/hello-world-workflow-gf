@@ -1,6 +1,4 @@
-prefix: 'git@git.biotech.cdc.gov:'
+# list of app repos to import into project, each list item
+# must be a full url to a git repo
 apps:
-# list of apps to import into project
-# example:
-#- geneflow-apps/bwa-index-0.7.15-gf
-#- geneflow-apps/bwa-mem-0.7.15-gf
+- git@git.biotech.cdc.gov:geneflow-apps/app-template-0.1-gf
