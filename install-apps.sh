@@ -106,6 +106,10 @@ if [ ${TYPE} = "build-package" ]; then
 fi
 
 # install assets into app folders
+
+# use this for more robust processing of assets file:
+# for val in $(cat ./assets.yaml | yq -r 'select(."build-package" != null) | ."build-package"[]'); do echo $val; done
+
 APP_LIST=$(ls ${GF_DIR}/workflow/apps)
 for app in ${APP_LIST[@]}; do
     # assets.yaml file exists
