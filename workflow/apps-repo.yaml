@@ -1,4 +1,10 @@
 # list of app repos to import into project, each list item
 # must be a full url to a git repo
+#
 apps:
-- git@git.biotech.cdc.gov:geneflow-apps/app-template-0.1-gf
+- name: workflow-step
+  repo: git@git.biotech.cdc.gov:geneflow-apps/app-template-0.1-gf
+  tag: 0.1
+  folder: app-template-0.1-gf-0.1
+  asset: singularity
+
