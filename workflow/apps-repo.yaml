@@ -1,10 +1,21 @@
-# list of app repos to import into project, each list item
-# must be a full url to a git repo
-#
 apps:
-- name: workflow-step
-  repo: git@git.biotech.cdc.gov:geneflow-apps/app-template-0.1-gf
-  tag: 0.1
-  folder: app-template-0.1-gf-0.1
-  asset: singularity
 
+# array of apps, each app must have the following fields:
+# 1. name: name of the app, mainly for ease of CLI usage
+# 2. repo: repo to pull app
+# 3. tag: tag or branch of repo (usually should be a version number)
+# 4. folder: folder to which repo should be checked out. This needs to match the agave definition 
+#    and should normally be [app repo name]-[version number].
+# 5. asset: default app asset to install, overridden by asset provided to CLI
+
+- name: bwa-index
+  repo: https://git.biotech.cdc.gov/geneflow-apps/bwa-index-0.7.17-gf.git
+  tag: '0.2'
+  folder: bwa-index-0.7.17-gf-0.2
+  asset: none
+
+- name: bwa-mem
+  repo: https://git.biotech.cdc.gov/geneflow-apps/bwa-mem-0.7.17-gf.git
+  tag: '0.3'
+  folder: bwa-mem-0.7.17-gf-0.3
+  asset: none
