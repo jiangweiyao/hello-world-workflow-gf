@@ -10,7 +10,7 @@ apps:
 
 apps:
 - name: hello-world
-  repo: https://github.com/[USER]/hello-world-gf.git
+  repo: https://github.com/jiangweiyao/hello-world-gf.git
   tag: '0.1'
   folder: hello-world-gf-0.1
   asset: none
