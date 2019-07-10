@@ -1,6 +1,18 @@
-Workflow
-========
 
-Add your workflow description and basic usage instructions here. At a minimum, it should include a description of inputs and parameters.
+ World! One-Step GeneFlow Workflow
+=======================================
 
+Version: 0.1
+
+This is a basic one-step GeneFlow workflow that prints "Hello World!" to a text file.
+
+Inputs
+------
+
+1. file: Dummy input file, use any small file.
+
+Parameters
+----------
+
+None
 

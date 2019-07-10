@@ -4,62 +4,32 @@ gfVersion: v1.0
 class: workflow
 
 # metadata
-name: BWA Workflow
-description: Sequence alignment with BWA
-documentation_uri: http://url/to/documentation.pdf
+name: Hello World Workflow
+description: Hello World one-step workflow
+documentation_uri:
 repo_uri: 'https://gitlab.com/geneflow/workflows/workflow-template.git'
 version: '0.1'
 username: user
 
 final_output:
-- align
+- hello
 
 # inputs
 inputs:
-  files:
-    label: Input Directory
-    description: Input directory containing FASTQ files
-    type: Directory
-    default: /input/files
-    enable: true
-    visible: true
-  reference:
-    label: Reference Sequence FASTA
-    description: Reference sequence FASTA file
+  file:
+    label: Dummy Input File
+    description: Dummy input file
     type: File
-    default: /input/reference.fa
     enable: true
     visible: true
 
 # parameters
-parameters:
-  threads:
-    label: CPU Threads
-    description: Number of CPU threads for alignment
-    type: int
-    default: 2
-    enable: false
-    visible: true
 
 # steps
 steps:
-  index:
-    app: apps/bwa-index-0.7.17-gf-0.2/app.yaml
+  hello:
+    app: apps/hello-world-gf-0.1/app.yaml
     depend: []
     template:
-      reference: '{workflow->reference}'
-      output: reference
-
-  align:
-    app: apps/bwa-mem-0.7.17-gf-0.3/app.yaml
-    depend: [ "index" ]
-    map:
-      uri: '{workflow->files}'
-      regex: (.*)_(R|)1(.*)\.((fastq|fq)(|\.gz))$
-    template:
-      input: '{workflow->files}/{1}_{2}1{3}.{4}'
-      pair: '{workflow->files}/{1}_{2}2{3}.{4}'
-      reference: '{index->output}/reference'
-      threads: '{workflow->threads}'
-      output: '{1}.sam'
-...
+      file: '{workflow->file}'
+      output: output.txt

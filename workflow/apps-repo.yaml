@@ -8,14 +8,9 @@ apps:
 #    and should normally be [app repo name]-[version number].
 # 5. asset: default app asset to install, overridden by asset provided to CLI
 
-- name: bwa-index
-  repo: https://git.biotech.cdc.gov/geneflow-apps/bwa-index-0.7.17-gf.git
-  tag: '0.2'
-  folder: bwa-index-0.7.17-gf-0.2
-  asset: none
-
-- name: bwa-mem
-  repo: https://git.biotech.cdc.gov/geneflow-apps/bwa-mem-0.7.17-gf.git
-  tag: '0.3'
-  folder: bwa-mem-0.7.17-gf-0.3
+apps:
+- name: hello-world
+  repo: https://github.com/[USER]/hello-world-gf.git
+  tag: '0.1'
+  folder: hello-world-gf-0.1
   asset: none
