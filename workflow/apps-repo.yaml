@@ -11,6 +11,6 @@ apps:
 apps:
 - name: hello-world
   repo: https://github.com/jiangweiyao/hello-world-gf.git
-  tag: '0.1'
+  tag: '0.2'
   folder: hello-world-gf-0.1
   asset: none
